@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "path": "/home",
+            "destination": {
+                "uri": "http://localhost:8000",
+                "requiresAuthentication": false,
+                "role": "AllUsers"
+            }
+        },
+        {
+            "path": "/contact",
+            "destination": {
+                "uri": "http://localhost:8000",
+                "requiresAuthentication": false,
+                "role": "AllUsers"
+            }
+        },
+        {
+            "path": "/",
+            "destination": {
+                "uri": "http://localhost:8000",
+                "requiresAuthentication": false,
+                "role": "AllUsers"
+            }
+        }
+    ]
+}

@@ -19,6 +19,11 @@ namespace auth_proxy
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    config.SetBasePath(Directory.GetCurrentDirectory());
+                    config.AddJsonFile("proxy_routes.json", optional: false, reloadOnChange: true);
+                })
                 .UseStartup<Startup>();
     }
 }
